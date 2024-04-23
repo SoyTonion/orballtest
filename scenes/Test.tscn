@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://8i6ushuqlrpd"]
+
+[ext_resource type="Texture2D" uid="uid://daa2xjdrma64r" path="res://assets/floor.png" id="1_qh506"]
+[ext_resource type="PackedScene" uid="uid://byiivw8qdbqkm" path="res://scenes/Orball.tscn" id="2_v0occ"]
+[ext_resource type="PackedScene" uid="uid://dxjrru214jiw" path="res://scenes/hedgehog.tscn" id="3_phoy4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xvamm"]
+blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy744"]
+size = Vector2(428, 41.25)
+
+[node name="Node" type="Node"]
+
+[node name="Floor" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(213, 200)
+scale = Vector2(1.46259, 1.26667)
+texture = ExtResource("1_qh506")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+position = Vector2(-127.172, -204.286)
+scale = Vector2(0.683719, 1.42857)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
+material = SubResource("CanvasItemMaterial_xvamm")
+position = Vector2(186, 142.375)
+shape = SubResource("RectangleShape2D_hy744")
+one_way_collision = true
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Floor2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(679, 204)
+scale = Vector2(1.45393, 1.26917)
+texture = ExtResource("1_qh506")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Floor2"]
+position = Vector2(16.507, -46.37)
+scale = Vector2(0.687791, 1.40515)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/StaticBody2D2"]
+material = SubResource("CanvasItemMaterial_xvamm")
+position = Vector2(-24.0001, 32.4393)
+shape = SubResource("RectangleShape2D_hy744")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Orball" parent="." instance=ExtResource("2_v0occ")]
+position = Vector2(48, 144)
+
+[node name="Camera2D" type="Camera2D" parent="Orball"]
+
+[node name="Hedgehog" parent="." instance=ExtResource("3_phoy4")]
+position = Vector2(111, 57)
