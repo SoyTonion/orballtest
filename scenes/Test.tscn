@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://8i6ushuqlrpd"]
+[gd_scene load_steps=5 format=3 uid="uid://8i6ushuqlrpd"]
 
-[ext_resource type="Texture2D" uid="uid://daa2xjdrma64r" path="res://assets/floor.png" id="1_qh506"]
 [ext_resource type="PackedScene" uid="uid://byiivw8qdbqkm" path="res://scenes/Orball.tscn" id="2_v0occ"]
 [ext_resource type="PackedScene" uid="uid://dxjrru214jiw" path="res://scenes/hedgehog.tscn" id="3_phoy4"]
 
@@ -16,7 +15,6 @@ size = Vector2(428, 41.25)
 texture_filter = 1
 position = Vector2(213, 200)
 scale = Vector2(1.46259, 1.26667)
-texture = ExtResource("1_qh506")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
 position = Vector2(-127.172, -204.286)
@@ -33,7 +31,6 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 texture_filter = 1
 position = Vector2(679, 204)
 scale = Vector2(1.45393, 1.26917)
-texture = ExtResource("1_qh506")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Floor2"]
 position = Vector2(16.507, -46.37)
